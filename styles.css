@@ -73,6 +73,10 @@ body {
     color: var(--font-color);
 }
 
+#navbar a:hover {
+    text-decoration: underline;
+}
+
 .hero-text {
     flex: 1 1 50%;
     display: flex;
@@ -107,6 +111,7 @@ button:hover {
     height: 250px;
     object-fit: cover;
     border-radius: 1rem;
+    background-color: var(--font-color);
 }
 
 /* HEADER SECTION END */
@@ -127,10 +132,6 @@ button:hover {
 }
 
 .container {
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center; */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     place-content: center;
@@ -146,7 +147,8 @@ button:hover {
 }
 
 .quote-section {
-    background-color: var(--background-color2);
+    background-color: #aaaa;
+    color: #444;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,6 +186,7 @@ button:hover {
     margin: auto;
     margin-bottom: 5rem;
     background-color: var(--background-color2);
+    box-shadow: 2px 2px 0 #000;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -221,3 +224,57 @@ input:focus {
 }
 
 /* MAIN SECTION END */
+
+/* FOOTER SECTION START */
+
+footer {
+    width: 98%;
+    margin: auto;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+    background-color: var(--background-color2);
+    box-shadow: 2px 2px 0 #000;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+
+footer div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    padding: 2rem;
+}
+
+.contact-links ul {
+    list-style: none;
+    display: flex;
+    gap: 10rem;
+}
+
+.contact-links ul a {
+    color: var(--font-color);
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.contact-links ul a:hover {
+    text-decoration: underline;
+}
+
+.social-links,
+.social-links a {
+    font-size: 3.5rem;
+    padding: 1rem;
+    color: var(--font-color);
+    transition: all .3s ease-in-out;
+}
+
+.social-links a:hover {
+    transform: translate(2.5px, -2.5px);
+    text-shadow: -2.5px 2.5px 0 #000;
+}
+
+/* FOOTER SECTION END */
