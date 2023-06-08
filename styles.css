@@ -31,9 +31,10 @@ body {
 .initial-content {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     font-size: 2rem;
     background-color: var(--background-color2);
-    padding: 0 10rem;
+    padding: 8rem 10rem 0 10rem;
     text-shadow: 1.5px 1.5px 0 #000;
 }
 
@@ -77,21 +78,47 @@ body {
     text-decoration: underline;
 }
 
-#search-bar {
+.search-section {
+    width: 100%;
+    position: fixed;
+    top: 0;
     display: flex;
-    gap: 1rem;
+    justify-content: center;
+    background-color: #1f2937cf;
 }
 
-#search-bar input {
+#search-bar {
+    display: flex;
+    margin: 2rem;
+}
+
+#search-bar input[type="search"] {
+    width: 50vw;
+    height: 3em;
     padding: 0 1rem;
     border: none;
+    border-radius: 50em 0 0 50em;
+    color: #555;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
     outline: none;
 }
 
-#search-bar input,
 #search-bar button {
-    flex: 1 1 auto;
-    border-radius: 2rem;
+    width: 3em;
+    border-radius: 0 50em 50em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: var(--button-color);
+    color: #fff;
+    cursor: pointer;
+    transition: color .2s ease-in-out;
+}
+
+#search-bar button:hover {
+    color: var(--background-color2);
 }
 
 .hero-text {
@@ -103,7 +130,7 @@ body {
     line-height: 5rem;
 }
 
-button {
+button:not(.search-button) {
     background-color: var(--button-color);
     border-radius: 0.5rem;
     border: none;
@@ -114,7 +141,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+button:not(.search-button):hover {
     transform: scale(1.1);
 }
 
