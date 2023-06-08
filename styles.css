@@ -77,6 +77,23 @@ body {
     text-decoration: underline;
 }
 
+#search-bar {
+    display: flex;
+    gap: 1rem;
+}
+
+#search-bar input {
+    padding: 0 1rem;
+    border: none;
+    outline: none;
+}
+
+#search-bar input,
+#search-bar button {
+    flex: 1 1 auto;
+    border-radius: 2rem;
+}
+
 .hero-text {
     flex: 1 1 50%;
     display: flex;
@@ -131,7 +148,7 @@ button:hover {
     text-shadow: 1.5px 1.5px 0 #000;
 }
 
-.container {
+.image-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     place-content: center;
@@ -139,7 +156,7 @@ button:hover {
     padding: 3rem;
 }
 
-.container img {
+.image-container img {
     width: 350px;
     height: 200px;
     border-radius: 1rem;
@@ -160,6 +177,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     font-size: 3rem;
+    text-shadow: 1px 1px 0 #000;
     text-align: center;
     padding: 1rem;
 }
@@ -262,6 +280,11 @@ footer div {
 
 .contact-links ul a:hover {
     text-decoration: underline;
+}
+
+.copyright p {
+    cursor: pointer;
+    padding: 1rem;
 }
 
 .social-links,
