@@ -2,9 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Rubik&display=swap');
 
 :root {
-    --background-color: #555;
+    --background-color: #eee;
     --background-color2: #1f2937;
     --font-color: #aaa;
+    --font-color2: #656f79;
     --button-color: #3882f6;
 }
 
@@ -66,6 +67,9 @@ body {
 #navbar ul li {
     list-style: none;
     flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     text-align: center;
 }
 
@@ -76,6 +80,25 @@ body {
 
 #navbar a:hover {
     text-decoration: underline;
+}
+
+#navbar .upload-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--button-color);
+    border-radius: 100rem;
+    border: none;
+    padding: 0.5rem 2rem;
+    font: 500 1.5rem Nunito, sans-serif;
+    color: #fff;
+    transition: color .2s ease-in-out;
+    cursor: pointer;
+}
+
+#navbar .upload-button:hover {
+    background-color: #3882f6cc;
 }
 
 .search-section {
@@ -130,19 +153,20 @@ body {
     line-height: 5rem;
 }
 
-button:not(.search-button) {
+.hero-text button {
     background-color: var(--button-color);
     border-radius: 0.5rem;
     border: none;
     padding: 0.5rem 2rem;
     font: 500 1.5rem Nunito, sans-serif;
     color: #fff;
-    transition: transform .3s ease-in-out;
+    transition: all .3s ease-in-out;
     cursor: pointer;
 }
 
-button:not(.search-button):hover {
-    transform: scale(1.1);
+.hero-text button:hover {
+    transform: translate(2.5px, -2.5px);
+    box-shadow: -2.5px 2.5px 0 #000;
 }
 
 .hero-image {
@@ -171,7 +195,7 @@ button:not(.search-button):hover {
 
 .intro-text h1 {
     font: 900 5rem Montserrat, sans-serif;
-    color: #bbb;
+    color: var(--font-color2);
     text-shadow: 1.5px 1.5px 0 #000;
 }
 
@@ -181,6 +205,7 @@ button:not(.search-button):hover {
     place-content: center;
     gap: 2rem;
     padding: 3rem;
+    padding-top: 0;
 }
 
 .image-container img {
@@ -192,7 +217,7 @@ button:not(.search-button):hover {
 
 .quote-section {
     background-color: #aaaa;
-    color: #444;
+    color: var(--font-color2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -220,10 +245,26 @@ button:not(.search-button):hover {
     padding-right: 5rem;
 }
 
-.button-section {
+.view-more-section {
     display: grid;
     place-content: center;
-    padding: 2rem;
+    padding-bottom: 3rem;
+}
+
+.view-more-section button {
+    background-color: var(--button-color);
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.5rem 2rem;
+    font: 500 1.5rem Nunito, sans-serif;
+    color: #fff;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.view-more-section button:hover {
+    transform: translate(2.5px, -2.5px);
+    box-shadow: -2.5px 2.5px 0 #000;
 }
 
 #registration-form {
@@ -266,6 +307,21 @@ input:focus {
 
 ::-webkit-input-placeholder {
     font: 500 1.5rem Nunito, sans-serif;
+}
+
+#registration-form button {
+    background-color: var(--button-color);
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.5rem 2rem;
+    font: 500 1.5rem Nunito, sans-serif;
+    color: #fff;
+    transition: transform .3s ease-in-out;
+    cursor: pointer;
+}
+
+#registration-form button:hover {
+    transform: scale(1.05);
 }
 
 /* MAIN SECTION END */
