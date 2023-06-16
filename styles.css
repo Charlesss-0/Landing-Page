@@ -211,21 +211,21 @@ body {
 }
 
 .image-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    place-content: center;
-    gap: 2rem;
-    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1.5rem;
     padding-top: 0;
 }
 
 .image-container img {
     width: 350px;
-    height: 200px;
+    height: 220px;
     border-radius: 1rem;
     object-fit: cover;
     background-color: var(--font-color);
     transition: transform .3s ease-in-out;
+    flex: 1 1 auto;
 }
 
 .image-container img:hover {
